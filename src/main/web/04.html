@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .xxx-enter-active,
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="isShow=!isShow"> 切换</button>
+    <transition>
+        <p v-show="isShow">hell0</p>
+    </transition>
+    <h2>格式化时间|过滤器</h2>
+    <p>{{date}}</p>
+    <p>过滤器:{{date|dateStr}}</p>
+    <p>年月日:{{date|dateStr('YYYY MM DD')}}</p>
+
+    <H2>指令</H2>
+    <p ref="context">grq</p>
+    <button @click="hint">提示</button>
+    <p >||{{msg}}</p>
+</div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script>
+    Vue.filter('dateStr', function (value, formt) {
+        return moment(value).format(formt || 'YYYY-MM-DD HH:mm:ss');
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            isShow: true,
+            date: new Date(),
+            msg: ""
+        },
+        methods: {
+            hint() {
+                msg = this.$refs.context.textContent
+            }
+
+        }
+    })
+
+</script>
+</html>
+<!-- vue19 -->

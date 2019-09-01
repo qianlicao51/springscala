@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!--
+class 绑定
+-->
+<div id="app">
+    <p>{{message}}</p>
+    <h2>for 遍历</h2>
+    <li v-for="(p,index) in persons" :key="index">
+        {{index}}=-{{p.name}}--{{p.age}}---
+        <button @click="delPers(index)">删除</button>
+        <button @click="updatePer(index,{name:'tomS',age:26})">更新</button>
+    </li>
+  <h2>遍历</h2>
+ <!--   <li v-for="(value ,key)in persons[1]" :key="key">
+        {{value}}&#45;&#45;{{key}}
+    </li>
+-->
+</div>
+
+<div id="demo">
+    <h2> 1 class 绑定 :class='xxx'</h2>
+</div>
+
+</body>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            persons: [
+                {name: 'tom', age: 18},
+                {name: 'cat', age: 19},
+                {name: 'chorme', age: 20},
+                {name: 'fir', age: 21}
+            ]
+        },
+        methods: {
+            delPers(index) {
+                this.persons.splice(index, 1)//删除
+            },
+            updatePer(index,newP){
+                // this.persons[index]=newP
+                this.persons.splice(index,1,newP)
+            }
+        }
+    })
+
+
+</script>
+</html>

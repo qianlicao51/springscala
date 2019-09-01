@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1>绑定监听</h1>
+    <button @click="test1">test</button>
+    <button @click="test2('msg')">test2</button>
+    <button @click="test3">test3</button>
+    <a href="http://www.baidu.com" @click.prevent>去百度</a><!-- 阻止事件默认行为 -->
+
+    <h2> 修饰符</h2>
+    <hr>
+    <input type="text" name="" id="" @keyup.13="test8">
+    <input type="text" name="" id="" @keyup.enter="test8">
+    <h2>表单自动收集</h2>
+    <hr style="color: #FFF;">
+    <form action="/xx" @submit.prevent="handleSubmit">
+        <span>用户名</span>
+        <input type="text" name="name" v-model="username">
+        <spann>密码</spann>
+        <input type="password" name="pwd" v-model="pwd" id="">
+        <input type="submit" value="注册"/>
+    </form>
+
+</div>
+
+</body>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            username: "namess",
+            pwd: "pwddd",
+            test1() {
+                console.log("test")
+                alert("test")
+            },
+            test2(msg) {
+                alert(msg)
+            },
+            test3(event) {
+                alert(event.target.innerHTML)
+            },
+            test8(event) {
+                console.log(event.target.value + "|" + event.keyCode)
+                if (event.keyCode === '') {
+
+                }
+            }
+        },
+        methods: {
+            handleSubmit() {
+                console.log(this.username + "" + this.pwd)
+            }
+        }
+    })
+</script>
+</html>

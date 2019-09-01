@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!--
+class 绑定
+-->
+<div id="app">
+    <p>{{message}}</p>
+    <!--
+    排序和过滤
+    -->
+
+    <input type="text" v-model="seracNmae"/>
+
+    <h2>for 遍历</h2>
+    <li v-for="(p,index) in filtername" :key="index">
+        {{index}}=-{{p.name}}--{{p.age}}---
+    </li>
+
+   <!-- <button @click="asc">年龄升序</button>
+    <button @click="desc">年龄降序</button>-->
+    <button>原来顺序</button>
+
+</div>
+
+</body>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            seracNmae: '',
+            message: 'Hello Vue.js!',
+            persons: [
+                {name: ' tom', age: 18},
+                {name: ' cat', age: 19},
+                {name: ' chorme', age: 20},
+                {name: ' fir', age: 21}
+            ]
+        },
+        computed: {
+            filtername() {
+                const {seracNmae, persons} = this
+                let fsrson;
+                fsrson=persons.filter(p=> p.name.indexOf(seracNmae)!==-1)
+                console.log("logs"+seracNmae+"|"+fsrson)
+                return fsrson
+            }
+
+        }/*,
+        methods: {
+            asc() {
+            },
+            desc() {
+
+            }
+        }*/
+    })
+
+/*
+* 10 VUE 列表排序
+*
+* */
+</script>
+</html>
