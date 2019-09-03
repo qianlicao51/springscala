@@ -132,6 +132,14 @@
 			<artifactId>akka-persistence_2.11</artifactId>
 			<version>2.5.25</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-persistence-experimental -->
+		<!--<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-persistence-experimental_2.11</artifactId>
+			<version>2.4-M2</version>
+		</dependency>
+-->
+
 
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
