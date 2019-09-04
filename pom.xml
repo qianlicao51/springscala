@@ -140,11 +140,11 @@
 			<version>7.3.0-M26</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.scala-lang.modules/scala-async -->
-		<dependency>
-			<groupId>org.scala-lang.modules</groupId>
-			<artifactId>scala-async_2.11</artifactId>
-			<version>0.9.7</version>
-		</dependency>
+<dependency>
+	<groupId>org.scala-lang.modules</groupId>
+	<artifactId>scala-async_2.11</artifactId>
+	<version>0.9.7</version>
+</dependency>
 
 
 		<dependency>
@@ -165,6 +165,20 @@
 			<groupId>org.clojure</groupId>
 			<artifactId>core.async</artifactId>
 			<version>0.4.490</version>
+		</dependency>
+
+		<!-- 查询这个框架的介绍 -->
+		<!-- https://mvnrepository.com/artifact/com.chuusai/shapeless -->
+		<dependency>
+			<groupId>com.chuusai</groupId>
+			<artifactId>shapeless_2.11</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.scalaz/scalaz-core -->
+		<dependency>
+			<groupId>org.scalaz</groupId>
+			<artifactId>scalaz-core_2.11</artifactId>
+			<version>7.3.0-M31</version>
 		</dependency>
 
 	</dependencies>

@@ -13,7 +13,7 @@ object FuturesCallbacks extends App {
   def getUrlSpec(): Future[List[String]] = Future {
     val url = "https://github.com/qianlicao51/douyin/blob/master/pom.xml"
     val f = Source.fromURL(url)
-    try f.getLines().toList finally f.clone()
+    try f.getLines().toList finally f.close()
   }
 
   def find(lines: List[String], keyword: String): String =
