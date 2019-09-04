@@ -1,11 +1,10 @@
 package scalafuture
 
-import java.nio.charset.StandardCharsets
 import java.util.concurrent.TimeUnit
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent._
-import ExecutionContext.Implicits.global
-import scala.io.{BufferedSource, Source}
+import scala.io.Source
 
 object FuturesDataType extends App {
 
@@ -28,7 +27,6 @@ object FuturesDataType extends App {
 
   log("\n")
   log(s" status :${buildFile.value}.....")
-
 
   def log(msg: String): Unit = {
     println(msg)
