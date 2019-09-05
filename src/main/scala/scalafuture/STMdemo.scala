@@ -1,0 +1,5 @@
+package scalafuture
+
+object STMdemo {
+
+}
