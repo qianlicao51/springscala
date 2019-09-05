@@ -1,305 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.zhuzi.springscala</groupId>
-	<artifactId>springscala</artifactId>
-	<version>1.0-SNAPSHOT</version>
+    <groupId>com.zhuzi.springscala</groupId>
+    <artifactId>springscala</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-	<properties>
-		<!-- 文件拷贝时的编码 -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<!-- 编译时的编码 -->
-		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-		<joda-time.version>2.9.9</joda-time.version>
-		<commons-io>2.6</commons-io>
+    <properties>
+        <!-- 文件拷贝时的编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 编译时的编码 -->
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <joda-time.version>2.9.9</joda-time.version>
+        <commons-io>2.6</commons-io>
 
-		<scala.version>2.11.12</scala.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.14.8</version>
-			<scope>provided</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
+        <scala.version>2.11.12</scala.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.14.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
 
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.11.3</version>
-		</dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.11.3</version>
+        </dependency>
 
-		<!-- 时间 -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${joda-time.version}</version>
-		</dependency>
+        <!-- 时间 -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda-time.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons-io}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.22</version>
-		</dependency>
-		<!--<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-email</artifactId>
-			<version>1.5</version>
-		</dependency>-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.22</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>-->
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>4.3.18.RELEASE</version>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.3.18.RELEASE</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.4.6</version>
-		</dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.6</version>
+        </dependency>
 
-		<!-- 打包scala 这个不可少 -->
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>${scala.version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-compiler</artifactId>
-			<version>${scala.version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
-			<scope>test</scope>
-		</dependency>
+        <!-- 打包scala 这个不可少 -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_2.11</artifactId>
-			<version>2.4.0</version>
-		</dependency>
-		<!-- scala解析 html -->
-		<!-- https://mvnrepository.com/artifact/net.ruippeixotog/scala-scraper -->
-		<dependency>
-			<groupId>net.ruippeixotog</groupId>
-			<artifactId>scala-scraper_2.11</artifactId>
-			<version>2.1.0</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <!-- scala解析 html -->
+        <!-- https://mvnrepository.com/artifact/net.ruippeixotog/scala-scraper -->
+        <dependency>
+            <groupId>net.ruippeixotog</groupId>
+            <artifactId>scala-scraper_2.11</artifactId>
+            <version>2.1.0</version>
+        </dependency>
 
-		<!-- acotr -->
+        <!-- acotr -->
 
-		<dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-actor_2.11</artifactId>
-			<version>2.5.25</version>
-		</dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.11</artifactId>
+            <version>2.5.25</version>
+        </dependency>
 
-		<!-- 远程支持|多进程之间Actor通信 -->
-		<dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-remote_2.11</artifactId>
-			<version>2.5.25</version>
-		</dependency>
-		<dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-cluster_2.11</artifactId>
-			<version>2.5.25</version>
-		</dependency>
-		<dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-persistence_2.11</artifactId>
-			<version>2.5.25</version>
-		</dependency>
+        <!-- 远程支持|多进程之间Actor通信 -->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-remote_2.11</artifactId>
+            <version>2.5.25</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-cluster_2.11</artifactId>
+            <version>2.5.25</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-persistence_2.11</artifactId>
+            <version>2.5.25</version>
+        </dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.scalaz/scalaz-concurrent -->
-		<dependency>
-			<groupId>org.scalaz</groupId>
-			<artifactId>scalaz-concurrent_2.11</artifactId>
-			<version>7.3.0-M26</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.scala-lang.modules/scala-async -->
-<dependency>
-	<groupId>org.scala-lang.modules</groupId>
-	<artifactId>scala-async_2.11</artifactId>
-	<version>0.9.7</version>
-</dependency>
+        <!-- https://mvnrepository.com/artifact/org.scalaz/scalaz-concurrent -->
+        <dependency>
+            <groupId>org.scalaz</groupId>
+            <artifactId>scalaz-concurrent_2.11</artifactId>
+            <version>7.3.0-M26</version>
+        </dependency>
 
-
-		<dependency>
-			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-testkit_2.11</artifactId>
-			<version>2.4.20</version>
-			<scope>t</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.scalatest</groupId>
-			<artifactId>scalatest_2.11</artifactId>
-			<version>3.0.5</version>
-		</dependency>
-
-		<!-- 怀疑是一个异步框架 -->
-		<!-- https://mvnrepository.com/artifact/org.clojure/core.async -->
-		<dependency>
-			<groupId>org.clojure</groupId>
-			<artifactId>core.async</artifactId>
-			<version>0.4.490</version>
-		</dependency>
-
-		<!-- 查询这个框架的介绍 -->
-		<!-- https://mvnrepository.com/artifact/com.chuusai/shapeless -->
-		<dependency>
-			<groupId>com.chuusai</groupId>
-			<artifactId>shapeless_2.11</artifactId>
-			<version>2.3.3</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.scalaz/scalaz-core -->
-		<dependency>
-			<groupId>org.scalaz</groupId>
-			<artifactId>scalaz-core_2.11</artifactId>
-			<version>7.3.0-M31</version>
-		</dependency>
-
-	</dependencies>
-
-	<build>
-
-		<resources>
-			<!-- 解决打包时候Mapper.xml没进入 dao.class目录 (报错提示org.apache.ibatis.binding.BindingException: Invalid bound statement) -->
-			<resource>
-				<directory>src/main/java</directory>
-				<includes>
-					<include>**/*.xml</include>
-				</includes>
-			</resource>
+        <!-- https://mvnrepository.com/artifact/org.scala-lang.modules/scala-async -->
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-async_2.11</artifactId>
+            <version>0.9.7</version>
+        </dependency>
 
 
-			<!-- 控制资源文件的拷贝 -->
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/*.properties</include>
-					<include>**/*.xml</include>
-					<include>**/**</include>
-				</includes>
-				<!--<filtering>false</filtering>-->
-				<!-- && 在IDE中运行要把这个给注释掉，因为IDEA打包 默认路劲是 classes ,有下面这行 会把配置文件转移到其他目录 -->
-				<!-- TODO 在IDE 运行要把这个注释掉  -->
-				<!--<targetPath>${project.build.directory}/config</targetPath>-->
-			</resource>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-testkit_2.11</artifactId>
+            <version>2.4.20</version>
+            <scope>t</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.11</artifactId>
+            <version>3.0.5</version>
+        </dependency>
 
-		</resources>
-		<plugins>
+        <!-- 怀疑是一个异步框架 -->
+        <!-- https://mvnrepository.com/artifact/org.clojure/core.async -->
+        <dependency>
+            <groupId>org.clojure</groupId>
+            <artifactId>core.async</artifactId>
+            <version>0.4.490</version>
+        </dependency>
 
-			<!-- TODO 打包命令 -->
-			<!--  mvn clean scala:compile compile package -->
-			<!--  mvn clean scala:compile dependency:copy-dependencies -DoutputDirectory=target/lib compile package -->
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.0.2</version>
-				<configuration>
-					<archive><!-- 清单文件 -->
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<!--<mainClass>com.zhuzi.down.pic.Index</mainClass>-->
-							<!--	<mainClass>com.WC</mainClass>-->
-							<mainClass>Demo</mainClass>
-						</manifest>
-						<manifestEntries><!-- 给清单文件添加键值对(配置文件外置) -->
-							<Class-Path>config/</Class-Path>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
-				<configuration>
-					<!-- 编译时使用的JDK版本和UTF8编码 -->
-					<source>1.8</source>
-					<target>1.8</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
+        <!-- 查询这个框架的介绍 -->
+        <!-- https://mvnrepository.com/artifact/com.chuusai/shapeless -->
+        <dependency>
+            <groupId>com.chuusai</groupId>
+            <artifactId>shapeless_2.11</artifactId>
+            <version>2.3.3</version>
+        </dependency>
 
 
-			<!-- scala 打包配置  -->
-			<plugin>
-				<groupId>net.alchim31.maven</groupId>
-				<artifactId>scala-maven-plugin</artifactId>
-				<version>3.2.2</version>
-			</plugin>
-			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-			<!--  拷贝依赖的jar到lib目录(如果不配置可以使用  如下命令 把 依赖的jar 拷贝出来)  -->
-			<!-- mvn dependency:copy-dependencies -DoutputDirectory=target/lib-->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- 解决资源文件的编码问题 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version>
-				<configuration>
-					<encoding>${project.build.sourceEncoding}</encoding>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+        <!-- https://mvnrepository.com/artifact/org.scalaz/scalaz-core -->
+        <dependency>
+            <groupId>org.scalaz</groupId>
+            <artifactId>scalaz-core_2.11</artifactId>
+            <version>7.3.0-M31</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.netflix.rxjava/rxjava-scala -->
+        <dependency>
+            <groupId>com.netflix.rxjava</groupId>
+            <artifactId>rxjava-scala</artifactId>
+            <version>0.20.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.reactivex/rxjava -->
+        <dependency>
+            <groupId>io.reactivex</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>1.3.8</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava -->
+        <dependency>
+            <groupId>io.reactivex.rxjava2</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>2.2.12</version>
+        </dependency>
 
 
-	<repositories>
-		<repository>
-			<id>nexus-aliyun</id>
-			<name>Nexus aliyun</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
+    </dependencies>
+
+    <build>
+
+        <resources>
+            <!-- 解决打包时候Mapper.xml没进入 dao.class目录 (报错提示org.apache.ibatis.binding.BindingException: Invalid bound statement) -->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+
+
+            <!-- 控制资源文件的拷贝 -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/**</include>
+                </includes>
+                <!--<filtering>false</filtering>-->
+                <!-- && 在IDE中运行要把这个给注释掉，因为IDEA打包 默认路劲是 classes ,有下面这行 会把配置文件转移到其他目录 -->
+                <!-- TODO 在IDE 运行要把这个注释掉  -->
+                <!--<targetPath>${project.build.directory}/config</targetPath>-->
+            </resource>
+
+        </resources>
+        <plugins>
+
+            <!-- TODO 打包命令 -->
+            <!--  mvn clean scala:compile compile package -->
+            <!--  mvn clean scala:compile dependency:copy-dependencies -DoutputDirectory=target/lib compile package -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive><!-- 清单文件 -->
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!--<mainClass>com.zhuzi.down.pic.Index</mainClass>-->
+                            <!--	<mainClass>com.WC</mainClass>-->
+                            <mainClass>Demo</mainClass>
+                        </manifest>
+                        <manifestEntries><!-- 给清单文件添加键值对(配置文件外置) -->
+                            <Class-Path>config/</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <!-- 编译时使用的JDK版本和UTF8编码 -->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+
+            <!-- scala 打包配置  -->
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!--  拷贝依赖的jar到lib目录(如果不配置可以使用  如下命令 把 依赖的jar 拷贝出来)  -->
+            <!-- mvn dependency:copy-dependencies -DoutputDirectory=target/lib-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- 解决资源文件的编码问题 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
