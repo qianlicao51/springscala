@@ -1,5 +1,7 @@
 package scalafuture
 
+import org.joda.time.DateTime
+
 
 /**
  * Scala Async 库
@@ -22,4 +24,8 @@ object AsyncDemo extends App {
     }
     if (await(f1)) await(f2) else 0
   }
+
+
+  future.isCompleted
+  println(s"${new DateTime()}")
 }
