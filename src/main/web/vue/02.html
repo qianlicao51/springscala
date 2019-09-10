@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p> hello {{username}}</p>
+    <input v-model="username">
+    <img  v-bind:src="imgurl" alt="">
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            username: "vue学习",
+            imgurl:"http://i.muzishan.com/p/1527.jpg"
+        }
+    })
+
+</script>
+
+</html>
