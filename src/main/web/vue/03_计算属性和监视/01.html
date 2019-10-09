@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    姓<input type="text" v-model="fname"><br>
+    名<input  v-model="lastname"><br>
+    姓名1|单向<input><br>
+    姓名2|单向<input><br>
+    姓名3|双向<input><br>
+    <button @click.stop="test()"></button>
+    <a href="http://www.baidu.com" @click.prevent="test6()">百度</a>
+    <input type="text" @keyup="test9()">
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+new Vue({
+    el:'#app',
+    data:{
+        fname:'燕',
+        lastname:'青'
+    },
+    methods:{
+        test6(event) {
+            alert("阿西吧")
+        },
+        test9(){
+            alert(this.$refs.conversion.textContent)
+            alert(9)
+        }
+    }
+})
+
+</script>
+</html>

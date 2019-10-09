@@ -8,7 +8,13 @@
 <div id="app">
     <p> hello {{username}}</p>
     <input v-model="username">
-    <img  v-bind:src="imgurl" alt="">
+    <img v-bind:src="imgurl" alt="">
+    <img :src="imgurl" alt="">
+
+    <br>
+    <h2> 强制绑定 |事件</h2>
+    <button type="button" v-on:click="test(this)">测试按钮</button>
+    <button @click="test(username)">按钮2</button>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -18,7 +24,13 @@
         el: '#app',
         data: {
             username: "vue学习",
-            imgurl:"http://i.muzishan.com/p/1527.jpg"
+            imgurl: "https://tomcat.apache.org/res/images/tomcat.png"
+        },
+        methods: {
+            test(content) {
+                console.log(content)
+                alert(content)
+            }
         }
     })
 
