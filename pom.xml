@@ -17,7 +17,7 @@
 		<!-- 编译时的编码 -->
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		<joda-time.version>2.9.9</joda-time.version>
-		<commons-io>2.6</commons-io>
+		<commons-io>2.7</commons-io>
 
 		<scala.version>2.11.12</scala.version>
 	</properties>
